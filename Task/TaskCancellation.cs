@@ -24,7 +24,8 @@ namespace TaskProj
                 while(true)
                 {
                     if (token.IsCancellationRequested)
-                        break;
+                       throw new TaskCanceledException();
+
                     Console.WriteLine(i++);
                 }
             },token);
