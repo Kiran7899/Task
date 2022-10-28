@@ -23,8 +23,7 @@ namespace TaskProj
                 int i = 0;
                 while(true)
                 {
-                    if (token.IsCancellationRequested)
-                       throw new TaskCanceledException();
+                    token.ThrowIfCancellationRequested(); 
 
                     Console.WriteLine(i++);
                 }
