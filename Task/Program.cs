@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using TaskProj;
+
 Console.WriteLine("Hello, World!");
 
 //Explicit task creation
@@ -16,4 +18,8 @@ static int Count(int num)
 {
     return num + 1;
 }
+
+
+TaskCancellation taskCancellation = new TaskCancellation();
+taskCancellation.TaskCancelDemo();
 
